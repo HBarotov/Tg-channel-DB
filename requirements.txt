@@ -1,0 +1,8 @@
+environs==11.0.0
+marshmallow==3.21.3
+packaging==24.1
+pyaes==1.6.1
+pyasn1==0.6.0
+python-dotenv==1.0.1
+rsa==4.9
+Telethon==1.36.0
