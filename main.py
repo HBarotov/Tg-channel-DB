@@ -23,6 +23,11 @@ channel_name = env.str("channel_name")
 client = TelegramClient("session_name", api_id, api_hash)
 
 
+async def send_message(channel, message):
+    # Send a message to the channel
+    await client.send_message(channel, message)
+
+
 # Main async function
 async def main():
     await client.start(phone=phone_number)
@@ -42,6 +47,9 @@ async def main():
 
     # Path to your media_directory
     media_directory = env.str("media_directory")
+    media_folder = os.path.basename(media_directory)
+
+    await send_message(channel, f"Uploading {media_folder} folder")
 
     # Supported file extensions
     # Can be extended to include other document formats as well.
